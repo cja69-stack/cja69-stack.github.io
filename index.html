@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Charlie Acosta's personal page.">
-  <title>Charlie Acosta</title>
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background: #f3f7f4;
-      color: #183b29;
-      font-family: Arial, sans-serif;
-    }
-    main { padding: 2rem; text-align: center; }
-    h1 { margin: 0 0 1rem; font-size: clamp(2rem, 8vw, 4rem); }
-    p { margin: 0; font-size: 1.25rem; }
-  </style>
+  <meta name="description" content="Home — Charlie Acosta's personal portfolio.">
+  <title>Home | Charlie Acosta</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <main>
-    <h1>Charlie Acosta</h1>
-    <p>I love soccer.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html">Charlie Acosta<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero"><div><p class="eyebrow">A personal introduction</p><h1>Hello, I’m<br>Charlie Acosta.</h1><p class="lead">Welcome to my corner of the web. Get to know me, explore my work, and see what I’m learning along the way.</p><a class="button" href="about.html">A little about me ↗</a></div><aside class="intro-note"><span class="monogram" aria-hidden="true">CA</span><p>One thing about me</p><h2>I love soccer.</h2><p>A personal interest, and a good place to start a conversation.</p></aside></section><section class="explore"><p class="eyebrow">Take a look around</p><div class="link-grid"><a href="projects.html"><span>01 / My work</span><h2>Projects ↗</h2><p>A place for things I build and learn.</p></a><a href="skills.html"><span>02 / My toolkit</span><h2>Skills ↗</h2><p>The tools behind this website.</p></a><a href="contact.html"><span>03 / Say hello</span><h2>Contact ↗</h2><p>Find me online and get in touch.</p></a></div></section>
   </main>
+  <footer class="site-footer"><p>© <span data-year>2026</span> Charlie Acosta</p><p>A little about me, and what I’m building.</p></footer>
 </body>
 </html>
