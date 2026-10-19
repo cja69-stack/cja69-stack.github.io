@@ -7,6 +7,9 @@
 - Use Times New Roman as the primary font, with a serif fallback, and a base font size of 15px. Headings may use larger sizes to establish a clear hierarchy.
 - Keep the layout clean, readable, and responsive on mobile and desktop.
 - Use semantic HTML and accessible controls.
+- Use semantic HTML5 elements such as `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, and `<footer>` according to their purpose.
+- Organize content logically: shared header and navigation, one main content area with related content grouped into meaningful sections, and a footer. Use headings in a clear hierarchy.
+- Use exactly one `<h1>` per page for its primary heading, followed by `<h2>` and lower heading levels as appropriate.
 - Use only plain HTML, CSS, and JavaScript. Do not add frameworks or libraries.
 - Use relative file paths for local stylesheets, scripts, images, and internal page links. External links may use full URLs.
 - Keep personal details accurate. Do not invent biography, experience, qualifications, or contact information.
