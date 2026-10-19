@@ -14,6 +14,6 @@ Built with plain HTML, CSS, and JavaScript. No installation or build step is req
 
 ## Content to complete
 
-The site includes confirmed details (Charlie's name, interest in soccer, and public GitHub profile). Add personal background, education, and proficiency levels when available. The portfolio is the first project; replace the other two labeled project placeholders and their images with real project information. The portfolio image is an illustration, not a screenshot.
+The site includes confirmed details (Charlie's name, interest in soccer, and public GitHub profile). Add personal background, education, and proficiency levels when available. Projects include this portfolio and two supplied Python assignments, with descriptions, illustrated previews, and downloadable public copies in `projects/`. The preview images are illustrations, not execution screenshots. See `projects/README.md` for assignment status and setup notes.
 
 Add a public contact email to `contact.html` as a `mailto:` link when supplied. No message-submission form or backend is included.

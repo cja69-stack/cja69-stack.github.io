@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#e5e9df"/>
+  <rect x="38" y="44" width="564" height="310" rx="6" fill="#f7f5f0" stroke="#c2cabb"/>
+  <text x="62" y="82" font-family="serif" font-size="21" fill="#343c38">Assignment 2 / Data manipulation</text>
+  <path d="M62 100H578" stroke="#d7d9d0"/>
+  <text x="62" y="139" font-family="monospace" font-size="16" fill="#445e52" xml:space="preserve">for item in inventory:</text>
+  <text x="62" y="168" font-family="monospace" font-size="16" fill="#445e52" xml:space="preserve">  if item['quantity'] &lt; 20:</text>
+  <text x="62" y="197" font-family="monospace" font-size="16" fill="#445e52" xml:space="preserve">    restock.append(item['item'])</text>
+  <text x="62" y="226" font-family="monospace" font-size="16" fill="#445e52" xml:space="preserve"></text>
+  <text x="62" y="255" font-family="monospace" font-size="16" fill="#445e52" xml:space="preserve">total_value = 0</text>
+  <text x="62" y="329" font-family="serif" font-size="13" fill="#626963">Illustrated excerpt · Python coursework</text>
+</svg>

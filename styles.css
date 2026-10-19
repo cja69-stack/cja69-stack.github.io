@@ -56,6 +56,7 @@ h2 { font-weight: 400; font-size: 27px; line-height: 1.25; margin-bottom: 14px; 
 .project-content { padding: 24px; }
 .project h2 { font-size: 25px; }
 .tags { font-size: 13px; color: var(--muted); }
+.project-note { font-size: 13px; color: var(--muted); margin: 16px 0 0; overflow-wrap: anywhere; }
 .notice { background: var(--panel); padding: 18px 22px; max-width: 850px; }
 .skills-list { padding: 15px 0 70px; }
 .skills-list section { display: grid; grid-template-columns: 40px 1fr auto; gap: 22px; border-bottom: 1px solid var(--line); padding: 25px 0; }
