@@ -67,6 +67,9 @@ h2 { font-weight: 400; font-size: 27px; line-height: 1.25; margin-bottom: 14px; 
 .about-layout { display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; padding-bottom: 70px; }
 .quote { background: var(--panel); padding: 38px; align-self: start; }
 .quote h2 { font-size: 34px; }
+.quote h2.eyebrow { font-size: 12px; }
+.quote blockquote { margin: 0; }
+.quote blockquote p { font-size: 20px; line-height: 1.6; }
 .detail { padding: 22px 0; border-top: 1px solid var(--line); }
 .placeholder { color: var(--muted); }
 .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 10px 0 70px; }
