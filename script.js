@@ -19,9 +19,13 @@
 
   // Apply the preference before the page body is painted.
   applyTheme();
-  systemTheme.addEventListener("change", applyTheme);
+  if (typeof systemTheme.addEventListener === "function") {
+    systemTheme.addEventListener("change", applyTheme);
+  } else if (typeof systemTheme.addListener === "function") {
+    systemTheme.addListener(applyTheme);
+  }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function initializeControls() {
     document.querySelectorAll("[data-year]").forEach((element) => {
       element.textContent = String(new Date().getFullYear());
     });
@@ -38,5 +42,11 @@
         // Keep the selected theme for this page even without storage access.
       }
     });
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initializeControls);
+  } else {
+    initializeControls();
+  }
 })();
