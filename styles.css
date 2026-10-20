@@ -90,6 +90,20 @@ h2 { font-weight: 400; font-size: 27px; line-height: 1.25; margin-bottom: 14px; 
 .contact-card { padding: 32px; background: var(--panel); }
 .site-footer { border-top: 1px solid var(--line); padding: 24px 0; display: flex; justify-content: space-between; gap: 18px; color: var(--muted); }
 .site-footer p { margin: 0; }
+.contact-bubble { position: fixed; right: 20px; bottom: 20px; z-index: 4; border-radius: 30px; padding: 12px 22px; background: var(--accent); color: var(--button-ink); text-decoration: none; box-shadow: 0 3px 14px #0003; }
+.site-footer { padding-bottom: 90px; }
+#contact-dialog { width: min(480px, calc(100% - 32px)); max-height: calc(100dvh - 32px); overflow: auto; padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); color: var(--ink); }
+#contact-dialog::backdrop { background: #0008; }
+.contact-close { float: right; font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); padding: 8px 12px; min-height: 44px; cursor: pointer; }
+#contact-form label { display: block; margin: 14px 0 5px; }
+#contact-form input, #contact-form textarea { display: block; width: 100%; padding: 10px; font: inherit; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 4px; }
+#contact-form textarea { resize: vertical; }
+#contact-form .button { border: 0; font: inherit; cursor: pointer; }
+#contact-dialog a { overflow-wrap: anywhere; }
+.contact-status { margin-top: 16px; }
+.contact-draft { display: inline-block; }
+.contact-draft[hidden] { display: none; }
+input:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 @media (max-width: 760px) {
   .site-header, main, .site-footer { width: calc(100% - 36px); }
   .site-header { align-items: flex-start; flex-direction: column; gap: 12px; }

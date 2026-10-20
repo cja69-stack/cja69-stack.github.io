@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Projects — Charlie Acosta's personal portfolio.">
   <title>Projects | Charlie Acosta</title>
-  <link rel="stylesheet" href="styles.css?v=2">
-  <script src="script.js?v=3"></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="script.js?v=5"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -46,5 +46,20 @@
       </article></div>
   </main>
   <footer class="site-footer"><p>© <span data-year>2026</span> Charlie Acosta</p><p>A little about me, and what I’m building.</p></footer>
+  <a class="contact-bubble" href="mailto:Cja69@njit.edu" aria-haspopup="dialog">Contact me</a>
+  <dialog id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-help">
+    <button class="contact-close" type="button" aria-label="Close contact form">Close</button>
+    <h2 id="contact-title">Contact me</h2>
+    <p id="contact-help">Write to Charlie at <a href="mailto:Cja69@njit.edu">Cja69@njit.edu</a>. Prepare a draft here, then send it using your email app.</p>
+    <form id="contact-form">
+      <label for="contact-subject">Subject</label>
+      <input id="contact-subject" name="subject" required maxlength="150">
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="message" required maxlength="2000" rows="5"></textarea>
+      <button class="button" type="submit">Prepare email</button>
+    </form>
+    <p class="contact-status" role="status"></p>
+    <a class="contact-draft" href="mailto:Cja69@njit.edu" hidden>Open email app to send</a>
+  </dialog>
 </body>
 </html>

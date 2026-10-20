@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Home — Charlie Acosta's personal portfolio.">
   <title>Home | Charlie Acosta</title>
-  <link rel="stylesheet" href="styles.css?v=2">
-  <script src="script.js?v=3"></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script src="script.js?v=5"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -25,5 +25,20 @@
     <section class="hero"><div><p class="eyebrow">A personal introduction</p><h1>Hello, I’m<br>Charlie Acosta.</h1><p class="lead">Welcome to my corner of the web. Get to know me, explore my work, and see what I’m learning along the way.</p><a class="button" href="about.html">A little about me ↗</a></div><aside class="intro-note"><span class="monogram" aria-hidden="true">CA</span><p>One thing about me</p><h2>I love soccer.</h2><p>A personal interest, and a good place to start a conversation.</p></aside></section><section class="explore"><p class="eyebrow">Take a look around</p><div class="link-grid"><a href="projects.html"><span>01 / My work</span><h2>Projects ↗</h2><p>A place for things I build and learn.</p></a><a href="skills.html"><span>02 / My toolkit</span><h2>Skills ↗</h2><p>The tools behind this website.</p></a><a href="contact.html"><span>03 / Say hello</span><h2>Contact ↗</h2><p>Find me online and get in touch.</p></a></div></section>
   </main>
   <footer class="site-footer"><p>© <span data-year>2026</span> Charlie Acosta</p><p>A little about me, and what I’m building.</p></footer>
+  <a class="contact-bubble" href="mailto:Cja69@njit.edu" aria-haspopup="dialog">Contact me</a>
+  <dialog id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-help">
+    <button class="contact-close" type="button" aria-label="Close contact form">Close</button>
+    <h2 id="contact-title">Contact me</h2>
+    <p id="contact-help">Write to Charlie at <a href="mailto:Cja69@njit.edu">Cja69@njit.edu</a>. Prepare a draft here, then send it using your email app.</p>
+    <form id="contact-form">
+      <label for="contact-subject">Subject</label>
+      <input id="contact-subject" name="subject" required maxlength="150">
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="message" required maxlength="2000" rows="5"></textarea>
+      <button class="button" type="submit">Prepare email</button>
+    </form>
+    <p class="contact-status" role="status"></p>
+    <a class="contact-draft" href="mailto:Cja69@njit.edu" hidden>Open email app to send</a>
+  </dialog>
 </body>
 </html>
