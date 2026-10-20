@@ -14,7 +14,7 @@
     const dark = preference ? preference === "dark" : systemTheme.matches;
     document.documentElement.dataset.theme = dark ? "dark" : "light";
     const toggle = document.querySelector(".theme-toggle");
-    if (toggle) toggle.setAttribute("aria-pressed", String(dark));
+    if (toggle) toggle.textContent = dark ? "Light mode" : "Dark mode";
   }
 
   // Apply the preference before the page body is painted.
