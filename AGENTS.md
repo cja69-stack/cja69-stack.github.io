@@ -22,6 +22,7 @@
 - Clearly label missing personal details and project placeholders until Charlie provides real content; placeholders do not count as completed projects.
 - A contact form cannot send messages without a backend. If adding one, validate it with JavaScript and direct visitors to Charlie's supplied public email address. Never imply that a message was sent.
 - `styles.css` contains shared styling, `script.js` contains shared JavaScript, and `assets/` contains local images.
+- Keep every image file under 500 KB (500,000 bytes). Check image sizes before adding or updating assets, and optimize any image that reaches or exceeds this limit.
 - `README.md` introduces the repository.
 - The website is hosted on GitHub Pages at https://cja69-stack.github.io/.
 - There is currently no backend, database, build step, or automated test suite.
