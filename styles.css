@@ -23,28 +23,6 @@
   --button-hover: #c6dfcd;
 }
 * { box-sizing: border-box; }
-/* Native page transitions preserve normal links, history, and new-tab behavior. */
-@view-transition { navigation: auto; }
-.site-header { view-transition-name: site-navigation; }
-main { view-transition-name: page-content; }
-::view-transition-old(root),
-::view-transition-new(root),
-::view-transition-old(site-navigation),
-::view-transition-new(site-navigation) { animation: none; }
-::view-transition-old(page-content) { animation: page-slide-out 220ms ease-in both; }
-::view-transition-new(page-content) { animation: page-slide-in 380ms cubic-bezier(.22, 1, .36, 1) both; }
-@keyframes page-slide-out {
-  to { opacity: 0; transform: translateX(-32px); }
-}
-@keyframes page-slide-in {
-  from { opacity: 0; transform: translateX(48px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(*),
-  ::view-transition-old(*),
-  ::view-transition-new(*) { animation: none !important; }
-}
 .game-panel { max-width: 680px; margin: 0 auto 88px; padding: 36px 24px; text-align: center; border-radius: 28px; background: var(--panel); scroll-margin-top: 120px; }
 .game-panel h2 { font-size: 42px; }
 #game-status { font-size: 20px; min-height: 34px; color: var(--accent); }
