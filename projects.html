@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Projects — Charlie Acosta's personal portfolio.">
   <title>Projects | Charlie Acosta</title>
-  <link rel="stylesheet" href="styles.css?v=10">
-  <script src="script.js?v=6"></script>
+  <link rel="stylesheet" href="styles.css?v=11">
+  <script src="script.js?v=7"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +21,7 @@
     <button class="theme-toggle" type="button" hidden>Dark mode</button>
   </header>
   <main id="main">
-    <section class="page-heading"><p class="eyebrow">A collection of work</p><h1>Projects.</h1><p class="lead">A home for personal work, class assignments, and the lessons along the way.</p></section><div class="project-grid"><article class="project"><img src="assets/tic-tac-toe.svg" alt="Illustrated tic-tac-toe board with X and O marks" width="640" height="400"><div class="project-content"><p class="eyebrow">01 / Interactive game</p><h2>Tic-tac-toe</h2><p>A two-player browser game. Take turns placing X and O, get three in a row, and start a new round whenever you like.</p><p class="tags">HTML · CSS · JavaScript</p><a href="#tic-tac-toe">Play tic-tac-toe ↗</a></div></article><article class="project">
+    <section class="page-heading"><p class="eyebrow">A collection of work</p><h1>Projects.</h1><p class="lead">A home for personal work, class assignments, and the lessons along the way.</p></section><div class="project-grid"><article class="project"><img src="assets/tic-tac-toe.svg" alt="Illustrated tic-tac-toe board with X and O marks" width="640" height="400"><div class="project-content"><p class="eyebrow">01 / Interactive game</p><h2>Tic-tac-toe</h2><p>Play against a friend or challenge the AI with Easy, Medium, and Hard difficulty. Get three in a row to win.</p><p class="tags">HTML · CSS · JavaScript</p><a href="tic-tac-toe.html" target="_blank" rel="noopener">Play tic-tac-toe ↗ <span class="project-note">(opens in a new tab)</span></a></div></article><article class="project">
         <img src="assets/python-fundamentals.svg" alt="Illustrated code preview of the notebook's two-player Rock-Paper-Scissors exercise" width="640" height="400">
         <div class="project-content">
           <p class="eyebrow">02 / Python coursework</p>
@@ -43,24 +43,7 @@
           <p class="project-note">API exercises require internet access and the Requests package. The news exercise also requires your own NEWS_API_KEY environment variable.</p>
         </div>
       </article></div>
-    <section id="tic-tac-toe" class="game-panel" aria-labelledby="game-title">
-      <p class="eyebrow">Project 01 / Play together</p>
-      <h2 id="game-title">Tic-tac-toe</h2>
-      <p id="game-help">Two players, one screen. X goes first. Get three in a row, column, or diagonal to win.</p>
-      <p id="game-status" role="status" aria-live="polite">Enable JavaScript to play.</p>
-      <div class="game-board" role="group" aria-label="Tic-tac-toe board" aria-describedby="game-help">
-        <button class="game-cell" type="button" data-cell="0" aria-label="Row 1, column 1, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="1" aria-label="Row 1, column 2, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="2" aria-label="Row 1, column 3, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="3" aria-label="Row 2, column 1, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="4" aria-label="Row 2, column 2, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="5" aria-label="Row 2, column 3, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="6" aria-label="Row 3, column 1, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="7" aria-label="Row 3, column 2, empty" disabled></button>
-        <button class="game-cell" type="button" data-cell="8" aria-label="Row 3, column 3, empty" disabled></button>
-      </div>
-      <button id="game-reset" class="button" type="button" disabled>New game</button>
-    </section>
+
   </main>
   <footer class="site-footer"><p>© <span data-year>2026</span> Charlie Acosta</p><p>A little about me, and what I’m building.</p></footer>
   <a class="contact-bubble" href="mailto:Cja69@njit.edu" aria-haspopup="dialog">Contact me</a>

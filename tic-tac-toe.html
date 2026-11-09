@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Play tic-tac-toe with a friend or against three AI difficulty levels.">
+  <title>Tic-tac-toe | Charlie Acosta</title>
+  <link rel="stylesheet" href="styles.css?v=11">
+  <script src="script.js?v=7"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" hidden>Dark mode</button>
+  </header>
+  <main id="main"><section class="page-heading"><p class="eyebrow">Project 01 / A classic, reimagined</p><h1>Tic-tac-toe.</h1><p class="lead">A friendly rivalry. Or a little competition from the computer.</p><a href="projects.html">Back to projects</a></section>    <section id="tic-tac-toe" class="game-panel" aria-labelledby="game-title">
+      <p class="eyebrow">Project 01 / Play together</p>
+      <h2 id="game-title">Your next move.</h2>
+      <p id="game-help">Get three in a row, column, or diagonal. X goes first. Against the AI, you play X and the computer plays O.</p>
+      <div class="game-options">
+        <label for="game-mode">Play mode<select id="game-mode"><option value="two">Two players</option><option value="ai">Play against AI</option></select></label>
+        <label for="game-difficulty">AI difficulty<select id="game-difficulty" disabled aria-describedby="difficulty-help"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select></label>
+      </div>
+      <p id="difficulty-help" class="game-hint">Choose Play against AI to select a difficulty. Changing a setting starts a new game.</p>
+      <p id="game-status" role="status" aria-live="polite">Enable JavaScript to play.</p>
+      <div class="game-board" role="group" aria-label="Tic-tac-toe board" aria-describedby="game-help">
+        <button class="game-cell" type="button" data-cell="0" aria-label="Row 1, column 1, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="1" aria-label="Row 1, column 2, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="2" aria-label="Row 1, column 3, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="3" aria-label="Row 2, column 1, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="4" aria-label="Row 2, column 2, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="5" aria-label="Row 2, column 3, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="6" aria-label="Row 3, column 1, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="7" aria-label="Row 3, column 2, empty" disabled></button>
+        <button class="game-cell" type="button" data-cell="8" aria-label="Row 3, column 3, empty" disabled></button>
+      </div>
+      <button id="game-reset" class="button" type="button" disabled>New game</button>
+    </section></main>
+  <footer class="site-footer"><p>© <span data-year>2026</span> Charlie Acosta</p><p>A little about me, and what I’m building.</p></footer>
+  <a class="contact-bubble" href="mailto:Cja69@njit.edu" aria-haspopup="dialog">Contact me</a>
+  <dialog id="contact-dialog" aria-labelledby="contact-title" aria-describedby="contact-help">
+    <button class="contact-close" type="button" aria-label="Close contact form">Close</button>
+    <h2 id="contact-title">Contact me</h2>
+    <p id="contact-help">Write to Charlie at <a href="mailto:Cja69@njit.edu">Cja69@njit.edu</a>. Prepare a draft here, then send it using your email app.</p>
+    <form id="contact-form">
+      <label for="contact-subject">Subject</label>
+      <input id="contact-subject" name="subject" required maxlength="150">
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="message" required maxlength="2000" rows="5"></textarea>
+      <button class="button" type="submit">Prepare email</button>
+    </form>
+    <p class="contact-status" role="status"></p>
+    <a class="contact-draft" href="mailto:Cja69@njit.edu" hidden>Open email app to send</a>
+  </dialog>
+</body>
+</html>
