@@ -23,6 +23,15 @@
   --button-hover: #c6dfcd;
 }
 * { box-sizing: border-box; }
+.game-panel { max-width: 680px; margin: 0 auto 88px; padding: 36px 24px; text-align: center; border-radius: 28px; background: var(--panel); scroll-margin-top: 120px; }
+.game-panel h2 { font-size: 42px; }
+#game-status { font-size: 20px; min-height: 34px; color: var(--accent); }
+.game-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: min(100%, 360px); margin: 24px auto; }
+.game-cell { aspect-ratio: 1; border: 1px solid var(--line); border-radius: 16px; font: 54px "Times New Roman", serif; background: var(--card); color: var(--ink); cursor: pointer; }
+.game-cell:disabled { opacity: 1; cursor: default; }
+.game-cell:not(:disabled):hover { background: var(--paper); border-color: var(--accent); }
+.game-cell.winning-cell { background: var(--accent); color: var(--button-ink); }
+#game-reset { border: 0; font: inherit; cursor: pointer; }
 body {
   margin: 0;
   background: var(--paper);

@@ -26,6 +26,40 @@
   }
 
   function initializeControls() {
+    const cells = Array.from(document.querySelectorAll("[data-cell]"));
+    const gameStatus = document.querySelector("#game-status");
+    const resetGame = document.querySelector("#game-reset");
+    if (cells.length === 9 && gameStatus && resetGame) {
+      const lines = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]];
+      let board, player, finished;
+      function startGame() {
+        board = Array(9).fill(""); player = "X"; finished = false;
+        cells.forEach((cell, index) => {
+          cell.textContent = ""; cell.disabled = false;
+          cell.classList.remove("winning-cell");
+          cell.setAttribute("aria-label", `Row ${Math.floor(index / 3) + 1}, column ${index % 3 + 1}, empty`);
+        });
+        gameStatus.textContent = "X's turn";
+      }
+      cells.forEach((cell, index) => cell.addEventListener("click", () => {
+        if (finished || board[index]) return;
+        board[index] = player; cell.textContent = player; cell.disabled = true;
+        cell.setAttribute("aria-label", `Row ${Math.floor(index / 3) + 1}, column ${index % 3 + 1}, ${player}`);
+        const winningLine = lines.find(line => line.every(position => board[position] === player));
+        if (winningLine || board.every(Boolean)) {
+          finished = true;
+          gameStatus.textContent = winningLine ? `${player} wins! Start a new game to play again.` : "It's a draw! Start a new game to play again.";
+          if (winningLine) winningLine.forEach(position => cells[position].classList.add("winning-cell"));
+          cells.forEach(button => { button.disabled = true; }); resetGame.focus();
+        } else {
+          player = player === "X" ? "O" : "X";
+          gameStatus.textContent = `${player}'s turn`;
+        }
+      }));
+      resetGame.disabled = false;
+      resetGame.addEventListener("click", () => { startGame(); cells[0].focus(); });
+      startGame();
+    }
     const contactButton = document.querySelector(".contact-bubble");
     const contactDialog = document.querySelector("#contact-dialog");
     const contactForm = document.querySelector("#contact-form");
