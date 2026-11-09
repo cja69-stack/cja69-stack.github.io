@@ -118,6 +118,19 @@ input:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); 
   .project img { max-height: 280px; object-fit: cover; }
 }
 
+.welcome-panel { overflow: hidden; position: relative; padding: 48px 24px; border-radius: 32px; background: var(--panel); }
+.welcome-panel h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1.08; margin-bottom: 24px; }
+.welcome-panel > p:not(.eyebrow) { max-width: 650px; margin: 0 auto 28px; font-size: 19px; line-height: 1.6; color: var(--muted); }
+.curiosity-orbit { width: 104px; height: 104px; margin: 0 auto 28px; display: grid; place-items: center; border: 1px solid var(--accent); border-radius: 50%; position: relative; }
+.curiosity-orbit::before { content: ""; position: absolute; inset: 14px -18px; border: 1px solid var(--accent); border-radius: 50%; transform: rotate(-35deg); opacity: .45; }
+.curiosity-orbit::after { content: ""; position: absolute; inset: -7px; border-radius: 50%; border-top: 5px solid var(--accent); animation: curiosity-turn 18s linear infinite; }
+.curiosity-orbit span { font-size: 48px; line-height: 1; color: var(--accent); }
+.interest-pills { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0 0 28px; }
+.interest-pills li { border: 1px solid var(--line); border-radius: 99px; padding: 7px 16px; background: var(--paper); }
+.welcome-link { display: inline-block; padding: 8px; color: var(--accent); font-size: 18px; }
+@keyframes curiosity-turn { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .curiosity-orbit::after { animation: none; } }
+
 /* Spacious presentation with the portfolio's original sage and cream palette. */
 html { scroll-padding-top: 110px; }
 .site-header {
