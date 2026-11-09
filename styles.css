@@ -57,7 +57,7 @@ h2 { font-weight: 400; font-size: 27px; line-height: 1.25; margin-bottom: 14px; 
 .monogram { display: block; font-size: 90px; line-height: 1.8; letter-spacing: -.08em; color: var(--accent); border-bottom: 1px solid #b7c2b1; margin-bottom: 24px; }
 .intro-note p:last-child { color: var(--muted); }
 .explore { padding: 28px 0 60px; border-top: 1px solid var(--line); }
-.link-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.link-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
 .link-grid a { text-decoration: none; padding: 20px 0; }
 .link-grid a:hover h2 { text-decoration: underline; }
 .link-grid span { color: var(--muted); font-size: 13px; }
