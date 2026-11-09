@@ -23,6 +23,16 @@
   --button-hover: #c6dfcd;
 }
 * { box-sizing: border-box; }
+/* Animate the arriving page without delaying or hiding the departing page. */
+body { overflow-x: clip; }
+main { animation: page-arrive 360ms cubic-bezier(.22, 1, .36, 1); }
+@keyframes page-arrive {
+  from { opacity: .25; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  main { animation: none; }
+}
 .game-panel { max-width: 680px; margin: 0 auto 88px; padding: 36px 24px; text-align: center; border-radius: 28px; background: var(--panel); scroll-margin-top: 120px; }
 .game-panel h2 { font-size: 42px; }
 #game-status { font-size: 20px; min-height: 34px; color: var(--accent); }

@@ -26,47 +26,6 @@
   }
 
   function initializeControls() {
-    const main = document.querySelector("main");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (main && typeof main.animate === "function") {
-      let animation = null;
-      let navigating = false;
-      const pages = new Set(["index.html", "about.html", "projects.html", "skills.html", "contact.html", "tic-tac-toe.html"]);
-      function enterPage() {
-        if (animation) animation.cancel();
-        navigating = false;
-        if (reducedMotion.matches) return;
-        animation = main.animate([
-          { opacity: 0, transform: "translateX(56px)" },
-          { opacity: 1, transform: "translateX(0)" }
-        ], { duration: 480, easing: "cubic-bezier(.22, 1, .36, 1)" });
-      }
-      enterPage();
-      // Restore visibility when Back/Forward returns a cached document.
-      window.addEventListener("pageshow", event => { if (event.persisted) enterPage(); });
-      reducedMotion.addEventListener("change", () => { if (reducedMotion.matches && animation) animation.cancel(); });
-      document.addEventListener("click", event => {
-        if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        const link = event.target.closest("a[href]");
-        if (!link || link.hasAttribute("download") || (link.target && link.target !== "_self")) return;
-        const destination = new URL(link.href, window.location.href);
-        const current = new URL(window.location.href);
-        if (destination.origin !== current.origin || destination.pathname.slice(0, destination.pathname.lastIndexOf("/") + 1) !== current.pathname.slice(0, current.pathname.lastIndexOf("/") + 1)) return;
-        const name = destination.pathname.split("/").pop() || "index.html";
-        if (!pages.has(name) || (destination.pathname === current.pathname && destination.search === current.search) || reducedMotion.matches) return;
-        event.preventDefault();
-        if (navigating) return;
-        navigating = true;
-        if (animation) animation.cancel();
-        animation = main.animate([
-          { opacity: 1, transform: "translateX(0)" },
-          { opacity: 0, transform: "translateX(-40px)" }
-        ], { duration: 200, easing: "ease-in", fill: "forwards" });
-        // A time limit keeps navigation working if an animation is interrupted.
-        Promise.race([animation.finished.catch(() => {}), new Promise(resolve => setTimeout(resolve, 250))])
-          .then(() => window.location.assign(destination.href));
-      });
-    }
     const cells = Array.from(document.querySelectorAll("[data-cell]"));
     const gameStatus = document.querySelector("#game-status");
     const resetGame = document.querySelector("#game-reset");
