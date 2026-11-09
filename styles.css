@@ -118,6 +118,8 @@ h2 { font-weight: 400; font-size: 27px; line-height: 1.25; margin-bottom: 14px; 
 .project-note { font-size: 13px; color: var(--muted); margin: 16px 0 0; overflow-wrap: anywhere; }
 .notice { background: var(--panel); padding: 18px 22px; max-width: 850px; }
 .skills-list { padding: 15px 0 70px; }
+.skills-story { max-width: 760px; margin: 0 auto; padding: 0 8px 88px; font-size: clamp(19px, 2vw, 22px); line-height: 1.7; color: var(--muted); }
+.skills-story p { margin-bottom: 28px; }
 .skills-list section { display: grid; grid-template-columns: 40px 1fr auto; gap: 22px; border-bottom: 1px solid var(--line); padding: 25px 0; }
 .skills-list section > span, .skill-label { color: var(--muted); }
 .skills-list h2 { margin-bottom: 8px; }
